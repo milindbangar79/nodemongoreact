@@ -1,0 +1,33 @@
+version: '2'
+services:
+
+  web:
+    image: node:latest
+    volumes:
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+    command: sh -c 'node app.js'
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongodb
+    networks:
+      - all
+  mongodb:
+    image: mongo:3.4
+    command: mongod --smallfiles
+    networks:
+      - all
+  myreact:
+    image: httpd
+    volumes:
+      - /home/devakarthik/Desktop/experiencedevops/devops/reactapp:/usr/local/apache2/htdocs
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+    networks:
+      - all
+
+networks:
+  all:
