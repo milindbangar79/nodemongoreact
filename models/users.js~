@@ -42,7 +42,7 @@ var users = {
     })
   },
 
-  updateUser: function(req, res, next) {
+  updateteUser: function(req, res, next) {
      var id = req.params.id;
     db.collection(usercollection).updateOne({"_id":new ObjectID(id)},
 			{"iconimage":req.params.iconimage,
