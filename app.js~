@@ -70,9 +70,9 @@ server.on('uncaughtException', (req, res, route, err) => {
 /**
  * Lift Server, Connect to DB & Bind Routes
  */
-server.listen(process.env.PORT, function() {
+server.listen(4000, function() {
     //TODO - MONGODB AUTH AND Write Concern
-    MongoClient.connect('mongodb://mongodb:27017/experiencedevops', (err, database) => {
+    MongoClient.connect('mongodb://localhost:27017/experiencedevops', (err, database) => {
         if(err) {
             log.error('MongoDB default connection error: ' + err)
             process.exit(1)

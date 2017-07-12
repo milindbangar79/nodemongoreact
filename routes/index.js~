@@ -14,3 +14,5 @@ fs.readdirSync(models_path).forEach(function (file) {
 //User
 server.get("/user", models.users.getAll)
 server.post("/user", models.users.createUser)
+server.get("/userid/:id", models.users.getUser)
+server.post("/updateuser", models.users.createUser)

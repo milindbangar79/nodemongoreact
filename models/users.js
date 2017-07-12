@@ -52,7 +52,7 @@ var users = {
 		          "livesin" : req.params.livesin,
 		          "ethnicity": req.params.ethnicity,
 		          "speaks" :req.params.speaks
-									}, function(err, docs) {
+			}, function(err, docs) {
       if (err) {
           res.json({error : "database error"});
       }
