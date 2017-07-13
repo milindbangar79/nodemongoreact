@@ -1,5 +1,5 @@
 {
-  "name": "securerestapi",
+  "name": "RESTapi",
   "version": "1.0.0",
   "description": "0.0.1",
   "main": "app.js",
